@@ -1,50 +1,14 @@
 # samkay.github.io
 Samuel's Engineering Portfolio
-# Tello Drone Navigation with OpenCV
 
-This project enables a Tello drone to be navigated using computer vision and machine learning techniques. The system is built with **Python** and **OpenCV**.
+### 🚀 My Featured Project: Tello CV Drone Navigation
+![IMG_5118](https://github.com/user-attachments/assets/1659e634-c108-42a2-aedc-7a895021c0d8)
 
-![IMG_5118](https://github.com/user-attachments/assets/e5a3c440-f6dd-4bb4-a04f-c5512b0d9116)
 
-## 🎯 Project Goals
+A hands-on computer vision project to control a Tello drone in real-time. I implemented two main features using **Python**, **OpenCV**, and the **djitellopy** library.
 
-This project was developed as part of the University of Windsor's Elevate program  and aims to achieve two primary navigation methods:
+* **Point-and-Click Flying:** Allows the user to click anywhere in the drone's video feed, and the drone calculates the error and flies to that position.
+* **ArUco Marker Tracking:** The drone automatically detects and follows a specific ArUco marker, using a proportional controller to adjust its speed and centering.
 
-### 1. Point and Click Flying
-* Captures the drone's live video feed in a window.
-* Detects mouse-click coordinates within that video feed.
-* Translates those coordinates into flight commands, telling the Tello drone to fly to the selected location.
+* **[View the Code on GitHub](https://github.com/samkayk8-prog/Tello-OpenCV-Navigation)**
 
-### 2. ArUco Marker Tracking
-* Uses the `OpenCV contrib` module to detect and identify ArUco markers (which function like QR codes).
-* The algorithm draws boundaries, determines the center of the detected marker, and identifies its unique ID.
-* This information is used to command the Tello drone to actively track and follow the marker in real-time.
-
-## 🛠️ Technologies Used
-
-* **Drone:** Tello
-* **Core Library:** OpenCV (`cv2`)
-* **Tracking Module:** `OpenCV contrib` (for ArUco detection)
-* **Language:** Python
-
-## Usage
-
-(Here you should explain how to run your code)
-
-1.  Clone the repository:
-    ```bash
-    git clone [your-repo-link]
-    ```
-2.  Install dependencies:
-    ```bash
-    pip install opencv-python opencv-contrib-python [any-other-libs]
-    ```
-3.  Run the main script:
-    ```bash
-    python track_marker.py
-    ```
-
-## Project Status
-* [ ] Point and Click Flying
-* [ ] ArUco Marker Detection
-* [ ] Drone Follow/Tracking Logic
