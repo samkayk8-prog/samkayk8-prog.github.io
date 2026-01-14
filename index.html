@@ -53,10 +53,13 @@
             color: #3498db;
         }
         .project-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-top: 10px;
+            width: 100%;
+         max-height: 400px; /* Limits height so diagrams don't become too long */
+    object-fit: contain; /* Ensures the diagram isn't cropped */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 15px;
         }
         .links ul {
             list-style: none;
@@ -110,47 +113,45 @@
                 Here you can find my latest projects.
             </p>
         </div>
-
         <div class="section">
-            <h2>Projects</h2>
+    <h2>Projects</h2>
 
-            <div class="project-card">
-                <h3>My Featured Project: Tello CV Drone Navigation</h3>
-                
-                <img src="IMG_5118.jpeg" alt="Tello CV Drone project">
-                
-                <p>
-                    This project involved developing a real-time control system for a Tello drone. Using <strong>Python</strong> and the <strong>OpenCV</strong> library, I implemented computer vision techniques to enable two key features: <strong>Point-and-Click flying</strong> (where the drone navigates to user-selected coordinates) and <strong>ArUco marker tracking</strong> (allowing the drone to autonomously identify and follow a specific marker).
-                </p>
-                <p>
-                    <a href="https://github.com/samkayk8-prog/Tello-OpenCV-Navigation" target="_blank">View Code on GitHub</a>
-                </p>
-            </div>
-            
-            </div>
-        <div class="project-card">
-        <h3>Autonomous Drone Navigation & Control (MATLAB/Simulink)</h3>
-        <p><em>University of Windsor | Elevate 2025</em> [cite: 5, 6]</p>
-        
-        <img src="matlab_simulink_model.png" alt="Simulink Drone Control Model">
-        
+    <div class="project-card">
+        <h3>Tello CV Drone Navigation</h3>
+        <img src="IMG_5118.jpeg" alt="Tello CV Drone project">
         <p>
-            Conducted research on autonomous flight systems, focusing on how lightweight drones serve as platforms for intelligent navigation and sensor feedback[cite: 8, 9]. This project involved modeling drone dynamics and implementing control algorithms to maintain stability in 3D space[cite: 14, 19].
+            Developed a real-time control system for a Tello drone using <strong>Python</strong> and <strong>OpenCV</strong>. Features include Point-and-Click navigation and autonomous ArUco marker tracking.
         </p>
-
-        <h4>Technical Execution:</h4>
-        <ul>
-            <li><strong>Control Algorithms:</strong> Developed PID-based stabilization to manage fundamental flight dynamics, including thrust, lift, and torque[cite: 14, 15].</li>
-            <li><strong>Software & Modeling:</strong> Utilized <strong>MATLAB and Simulink</strong> to structure system blocks, tune parameters, and generate embedded code for real-time simulation[cite: 36, 38, 39].</li>
-            <li><strong>Hardware Integration:</strong> Gained hands-on experience with the <strong>Pixhawk 2.4.8 Flight Controller</strong>, DJI F450 frame, and Simonk Firmware ESCs[cite: 26, 30, 32, 42].</li>
-            <li><strong>Sensor Fusion:</strong> Calculated motor commands using feedback from IMUs, ultrasound, cameras, and pressure sensors[cite: 16, 24].</li>
-        </ul>
-        
         <p>
-            <strong>Future Goals:</strong> Applying developed code to swarm flight coordination with hardware like the Crazyflie drone[cite: 44, 46].
+            <a href="https://github.com/samkayk8-prog/Tello-OpenCV-Navigation" target="_blank">View Code on GitHub</a>
         </p>
     </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+    <div class="project-card">
+        <h3>Autonomous Drone Navigation & Control</h3>
+        <p><em>University of Windsor | Elevate 2025</em></p>
+        
+        <img src="simulink_model.png" alt="Simulink Drone Control Model Diagram">
+        
+        <p>
+            This project focused on the development of autonomous flight systems by modeling drone dynamics and control algorithms[cite: 8, 41]. I explored the physics of flight—specifically thrust, lift, and torque—to maintain stability in 3D space[cite: 14, 15].
+        </p>
+
+        <h4>Technical Details:</h4>
+        <ul>
+            <li><strong>Control Logic:</strong> Implemented PID-based stabilization using Simulink to calculate motor commands from sensor feedback[cite: 10, 16].</li>
+            <li><strong>System Architecture:</strong> Structured the system blocks to process data from IMUs, cameras, and ultrasound sensors[cite: 24, 39].</li>
+            <li><strong>Hardware Stack:</strong> Integrated the <strong>Pixhawk 2.4.8</strong> Flight Controller with DJI F450 frames and 1000KV electric motors[cite: 26, 30, 34].</li>
+            <li><strong>Development:</strong> Used MATLAB scripts for parameter tuning and visualization, while generating embedded code for flight simulation[cite: 38, 39].</li>
+        </ul>
+        
+        <p><strong>Future Goals:</strong> Applying this control architecture to coordinate autonomous swarm flights with Crazyflie hardware[cite: 44, 46].</p>
+    </div>
 </div>
+
+        
 
         <div class="section links">
             <h2>Contact & Links</h2>
